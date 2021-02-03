@@ -19,7 +19,12 @@ while num < distance.length do
   num += 1
 end
 if sum < 1052
-  p "420円"
+  ans = 420
 else 
-  p "#{ans+1052+((sum-1052)/233+1).to_i*80}円" #1052mになった時点で+80円になるよう計算
+  ans= ans+420+((sum-1052)/233+1).to_i*80 #1052mになった時点で+80円になるよう計算
 end
+if time[0][0] >=22 || time[0][0] <=5
+  ans*1.2
+end
+p "#{ans}円"
+
